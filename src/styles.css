@@ -13,3 +13,10 @@ html, body {
     background-color: #121212; /*Fondo oscuro para toda la página*/
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */ 
 }
+
+:root {
+    --color-rosa: #DD2099;
+    --color-azul-oscuro: #123058;
+    --color-celeste: #7ADDE9;
+    --color-naranja: #F38126;
+  }

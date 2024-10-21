@@ -1,20 +1,25 @@
-
 <div class="topbar">
-    
-    <!-- <div class="add-button">
-        <button class=" add-btn" (click)="addNewData()">
-            <i class="sidenav-link-icon"><fa-icon [icon]="faPlus" ></fa-icon></i>
-            <span class="sidenav-link-text">Agregar</span>
-        </button>
+    <div class="logo-container">
+        <img class="img-logo" src="assets/images/Logo8-4.png" alt="">
     </div>
 
-    <div class="search">
-        <input type="text" name="Buscar" id="search">
-    </div> -->
-    <div class="logout-button">
-        <a class="sidenav-nav-link" routerLink="/login" (click)="logOut()">
-            <i class="sidenav-link-icon"><fa-icon [icon]="faSignOut" ></fa-icon></i>
-            <span class="sidenav-link-text">Salir</span>
-        </a>
+    <div class="top-menu">
+        <ul>
+            <li routerLink="/main" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</li>
+            <li routerLink="/servicios" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Servicios</li>
+            <li routerLink="/trabajos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Trabajos</li>
+            <li routerLink="/nosotros" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Nosotros
+            </li>
+
+            <li>
+                <div>
+                    Icono
+                </div>
+            </li>
+            <li routerLink="/contactos" routerLinkActive="active">Contacto</li>
+        </ul>
+
     </div>
+
+
 </div>
