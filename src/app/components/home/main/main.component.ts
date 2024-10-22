@@ -11,7 +11,7 @@ import { SidebarComponent } from '../../commons/sidebar/sidebar.component';
 import { TopbarComponent } from '../../commons/topbar/topbar.component';
 import { TableModule } from 'primeng/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faEye, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faPlus, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
 interface SideNavToggle {
@@ -30,6 +30,8 @@ interface SideNavToggle {
 export class MainComponent {
   faEye = faEye;
   faPlus = faPlus;
+  faAngleRight = faAngleRight;
+
   isModalOpen = false;
   visible: boolean = false;
   items: any;

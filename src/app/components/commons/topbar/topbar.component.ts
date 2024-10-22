@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSignOut, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faSignOut, faPlus, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-topbar',
@@ -15,6 +15,7 @@ export class TopbarComponent {
 
   faSignOut = faSignOut;
   faPlus = faPlus;
+  faMoon = faMoon;
 
   addNewData() {
     this.actionSelected.emit({ action: 'addNew' })

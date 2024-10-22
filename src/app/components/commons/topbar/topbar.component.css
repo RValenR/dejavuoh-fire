@@ -9,7 +9,7 @@
         width: 70px;
         height: 70px;
         flex: 0 0 auto;
-        margin-left: 20px;
+        margin-left: 40px;
 
         .img-logo {
             width: 70px;
@@ -27,8 +27,8 @@
         height: 50px;
         text-align: center;
         font-family: 'Maven Pro', sans-serif;
-        font-weight: 600;
-        font-size: 18px;
+        font-weight: 500;
+        font-size: 16px;
 
         ul {
             list-style-type: none;
@@ -44,14 +44,21 @@
             background-color: transparent;
             border: 3px solid transparent;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         ul li.active {
-            /* background-color: #ffc0cb; */
-            /* Fondo rosado */
             border: 3px solid var(--color-rosa);
-            /* Borde rosado oscuro */
             color: #ffffff;
+            text-align: center;
+            background-color: transparent;
+            transition: box-shadow 0.3s ease, border 0.3s ease;
+
+            /* Efecto neón con sombra */
+            /* box-shadow:
+                0 0 1px var(--color-rosa),
+                0 0 2px var(--color-rosa),
+                0 0 4px var(--color-rosa); */
         }
     }
 }
