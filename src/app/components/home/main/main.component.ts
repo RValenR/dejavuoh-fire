@@ -12,6 +12,7 @@ import { TopbarComponent } from '../../commons/topbar/topbar.component';
 import { TableModule } from 'primeng/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEye, faPlus, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
 
 
 interface SideNavToggle {
@@ -23,7 +24,7 @@ interface SideNavToggle {
   selector: 'app-main',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FormsModule, ButtonModule, 
-    InputTextModule, DialogModule, SidebarComponent, TopbarComponent, TableModule, FontAwesomeModule],
+    InputTextModule, DialogModule, SidebarComponent, TopbarComponent, TableModule, FontAwesomeModule, RouterModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
