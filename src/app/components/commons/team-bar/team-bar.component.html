@@ -17,8 +17,10 @@
             Dando vida a ideas brillantes
         </div>
     </div>
-    <div class="nav-button" routerLink="/nosotros" routerLinkActive="active">
-        Saber más
+    <div class="nav-button-container" >
+        <div *ngIf="showButton" class="nav-button" routerLink="/nosotros" routerLinkActive="active">
+            Saber más
+        </div>
     </div>
 
 </div>

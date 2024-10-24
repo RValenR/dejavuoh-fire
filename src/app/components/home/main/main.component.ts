@@ -49,6 +49,7 @@ export class MainComponent {
 
   public specialStyleClass = '';
   public topbarStyle = '';
+  mostrarBotonTeamBar = true;
 
   constructor(private cdr: ChangeDetectorRef) {}
   
