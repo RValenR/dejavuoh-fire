@@ -103,21 +103,25 @@
                 font-family: 'Maven Pro', sans-serif;
                 width: 860px;
                 height: 168px;
+
                 .service-header-title {
                     cursor: default;
                     font-weight: 700;
                     font-size: 40px;
                 }
-                .service-header-text{
+
+                .service-header-text {
                     cursor: default;
                     font-weight: 200;
                     font-size: 16px;
                     padding: 24px 0px;
                 }
-                .service-header-buttons{
+
+                .service-header-buttons {
                     display: flex;
                     text-align: left;
-                    .contact-header-button{
+
+                    .contact-header-button {
                         border: 1px solid white;
                         border-radius: 8px;
                         width: 240px;
@@ -127,7 +131,8 @@
                         margin-right: 12px;
                         cursor: pointer;
                     }
-                    .see-more-header-button{
+
+                    .see-more-header-button {
                         border-radius: 8px;
                         width: 240px;
                         height: 48px;
@@ -139,11 +144,13 @@
 
                 }
             }
-            .service-header-img{
+
+            .service-header-img {
                 width: 168px;
                 height: 168px;
                 text-align: center;
-                .img-mas-header{
+
+                .img-mas-header {
                     transform: rotateY(180deg);
                     width: 100%;
                     height: 100%;
@@ -157,6 +164,57 @@
             color: white;
             display: flex;
             justify-content: center;
+
+            .web-img-service {
+                display: flex;
+                flex-direction: column;
+
+                .img-content-service {
+                    position: relative;
+                    overflow: hidden;
+                    width: 530px;
+                    height: 340px;
+
+                    .web-img {
+                        background-color: #666666;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin-right: 40px;
+                        opacity: 50%;
+                    }
+
+                    .web-img-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Orbitron', sans-serif;
+                        font-weight: 300;
+                        font-size: 30px;
+                        cursor: default;
+                    }
+                    .marketing-img-text{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 100%;
+                        text-align: center;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Maven Pro', sans-serif;
+                        font-weight: 300;
+                        font-size: 34px;
+                        cursor: default;
+                    }
+                }
+
+            }
+
+            .marketing-img-service {
+                background-color: #666666;
+                width: 530px;
+                height: 340px;
+            }
         }
     }
 
