@@ -1,11 +1,17 @@
 <div class="contact-container">
     <div class="contact-text-block">
-        <div class="contact-text-title">
-            Ponte en contacto
+        <div class="img-container">
+            <img *ngIf="showImage" class="img-text" src="assets/images/mascota-sinFondo.webp" alt="">
         </div>
-        <div class="contact-text-message">
-            ¿Tienes alguna pregunta o necesitas ayuda? ¡Contáctanos!
+        <div class="text-block">
+            <div class="contact-text-title">
+                Ponte en contacto
+            </div>
+            <div class="contact-text-message">
+                ¿Tienes alguna pregunta o necesitas ayuda? ¡Contáctanos!
+            </div>
         </div>
+        
     </div>
     <div class="contact-form-block">
         <form class="contact-form" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">

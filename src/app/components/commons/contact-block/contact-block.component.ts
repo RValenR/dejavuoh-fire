@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-block',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './contact-block.component.html',
   styleUrl: './contact-block.component.css'
 })
 export class ContactBlockComponent {
+  @Input() showImage: boolean = false;
   formulario: FormGroup = this.fb.group({}); ;
 
   constructor(private fb: FormBuilder) {}
