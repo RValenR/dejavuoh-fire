@@ -1,6 +1,6 @@
 <div class="contact-container">
     <div class="contact-text-block">
-        <div class="img-container">
+        <div class="img-container" [ngStyle]="{height: costumHeigh}">
             <img *ngIf="showImage" class="img-text" src="assets/images/mascota-sinFondo.webp" alt="">
         </div>
         <div class="text-block">
@@ -13,8 +13,8 @@
         </div>
         
     </div>
-    <div class="contact-form-block">
-        <form class="contact-form" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <div class="contact-form-block" [ngStyle]="{height: costumHeigh}">
+        <form *ngIf="showForm" class="contact-form" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" formControlName="nombre" />
 
@@ -26,5 +26,8 @@
 
             <button class="btn-submit" type="submit" [disabled]="!formulario.valid">Enviar mensaje</button>
         </form>
+        <div *ngIf="!showForm" class="btn-nav-contact" routerLink="/contactos" routerLinkActive="active">
+            Enviar mensaje
+        </div>
     </div>
 </div>
