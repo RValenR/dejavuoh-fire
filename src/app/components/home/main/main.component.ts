@@ -15,6 +15,7 @@ import { faEye, faPlus, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { RouterModule } from '@angular/router';
 import { TeamBarComponent } from '../../commons/team-bar/team-bar.component';
 import { ContactBlockComponent } from '../../commons/contact-block/contact-block.component';
+import { FooterComponent } from '../../commons/footer/footer.component';
 
 
 interface SideNavToggle {
@@ -27,7 +28,7 @@ interface SideNavToggle {
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FormsModule, ButtonModule, 
     InputTextModule, DialogModule, SidebarComponent, TopbarComponent, TableModule, FontAwesomeModule, RouterModule,
-    TeamBarComponent, ContactBlockComponent],
+    TeamBarComponent, ContactBlockComponent, FooterComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
