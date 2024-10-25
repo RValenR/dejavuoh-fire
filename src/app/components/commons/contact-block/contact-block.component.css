@@ -1,0 +1,58 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    padding: 60px 0px;
+    justify-content: center;
+
+    .contact-text-block {
+        font-family: 'Maven Pro', sans-serif;
+        color: white;
+        margin-right: 30px;
+        .contact-text-title{
+            font-weight: 700;
+            font-size: 40px;
+            margin-bottom: 24px;
+        }
+        .contact-text-message{
+            font-weight: 200;
+            font-size: 16px;
+        }
+    }
+
+    .contact-form-block {
+        color: white;
+        width: 520px;
+        height: 408px;
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Maven Pro', sans-serif;
+            font-weight: 200;
+            font-size: 14px;
+            margin-left: 30px;
+            input{
+                height: 36px;
+                border-radius: 8px;
+                margin-bottom: 40px;
+                margin-top: 4px;
+            }
+            textarea{
+                height: 96px;
+                border-radius: 8px;
+                margin-bottom: 40px;
+                margin-top: 4px;
+            }
+            .btn-submit{
+                width: 240px;
+                height: 48px;
+                border-radius: 8px;
+                background-color: var(--color-rosa);
+                padding: 12px;
+                color: white;
+                cursor: pointer;
+
+            }
+        }
+    }
+}
