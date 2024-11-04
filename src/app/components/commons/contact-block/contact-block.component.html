@@ -15,8 +15,9 @@
     </div>
     <div class="contact-form-block" [ngStyle]="{height: costumHeigh}">
         <form *ngIf="showForm" class="contact-form" [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+            
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" formControlName="nombre" />
+            <input type="text" id="nombre" formControlName="nombre"/>
 
             <label for="email">Email:</label>
             <input type="email" id="email" formControlName="email" />
@@ -24,10 +25,41 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" formControlName="mensaje" rows="4"></textarea>
 
-            <button class="btn-submit" type="submit" [disabled]="!formulario.valid">Enviar mensaje</button>
+            <button class="btn-submit" type="submit">Enviar mensaje</button>
         </form>
         <div *ngIf="!showForm" class="btn-nav-contact" routerLink="/contactos" routerLinkActive="active">
             Enviar mensaje
         </div>
     </div>
+
+    
+<!-- <div class="card flex justify-content-center gap-2">
+    <p-toast position="top-left" key="tl" />
+    <p-toast position="bottom-left" key="bl" />
+    <p-toast position="bottom-right" key="confirm" />
+
+    <p-button 
+        (onClick)="showTopLeft()" 
+        label="Top Left" />
+    <p-button 
+        (onClick)="showBottomLeft()" 
+        label="Bottom Left" 
+        severity="warning" />
+    <p-button 
+        (onClick)="showBottomRight()" 
+        label="Bottom Right" 
+        severity="help" />
+</div> -->
+
+<p-toast
+key="confirm" position="bottom-right"
+[baseZIndex]="5000">
+    <ng-template let-message pTemplate="headless" let-closeFn="closeFn">
+        <section class={{message.styleClass}}>
+                <p>
+                    {{message.summary}}
+                </p>
+        </section>
+    </ng-template>
+</p-toast>
 </div>
