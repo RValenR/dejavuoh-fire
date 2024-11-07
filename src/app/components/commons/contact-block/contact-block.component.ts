@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
+import { MainService } from '../../../services/main/main.service';
+import { ContactsService } from '../../../services/contacts/contacts.service';
 @Component({
   selector: 'app-contact-block',
   standalone: true,
@@ -20,6 +22,8 @@ export class ContactBlockComponent {
   @Input() costumHeigh: string = "408px";
   formulario: FormGroup = this.fb.group({});;
 
+  dataService = inject(MainService);
+  contactService = inject(ContactsService);
   constructor(
     private fb: FormBuilder,
     private messageService: MessageService
@@ -39,9 +43,15 @@ export class ContactBlockComponent {
   }
   enviarFormulario() {
     console.log('Envio prueba', this.formulario)
-    if (this.formulario.valid) {
+    if (this.formulario.valid){
+      let dataForm=this.formulario.value;
+      dataForm.mensaje = [{texto:String(dataForm.mensaje), dateText: new Date(), status:'pending'}]
+      console.log('Data a giardar ',dataForm.mensaje)
+      this.contactService.agregarOModificarMensaje(dataForm)
       console.log('Formulario enviado:', this.formulario.value);
+      this.formulario.reset();
       this.messageService.add({ key: 'confirm', severity: 'custom', summary: 'Mensaje enviado', life: 2000, styleClass:'success-message'});
+
 
     } else {
       // this.messageService.add({ key: 'confirm', severity: 'custom', summary: 'Uploading your files.', life: 2000});

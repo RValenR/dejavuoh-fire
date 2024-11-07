@@ -56,21 +56,21 @@ export class MainComponent {
   constructor(private cdr: ChangeDetectorRef) {}
   
   ngOnInit() {
-    this.fetchItems();
+    // this.fetchItems();
     // this.firebaseService.showInfo = true;
     // this.cdr.detectChanges();
     // this.firebaseService.pageStyle = 'body-trimmed-aux'
   }
 
-  async fetchItems() {
-    try {
-      const jsonItems = await this.dataService.getElements()
-      this.items = jsonItems;
-      console.log('Datos recibidos:', jsonItems);
-    } catch (error) {
-      console.error('Error al obtener los datos:', error);
-    }
-  }
+  // async fetchItems() {
+  //   try {
+  //     const jsonItems = await this.dataService.getElements()
+  //     this.items = jsonItems;
+  //     console.log('Datos recibidos:', jsonItems);
+  //   } catch (error) {
+  //     console.error('Error al obtener los datos:', error);
+  //   }
+  // }
 
   showInPanel(element:any){
     console.log(element);

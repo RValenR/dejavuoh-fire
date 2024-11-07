@@ -36,21 +36,21 @@ export class MainService {
     return new Promise((resolve, reject) => {
       // Inicializar Firebase
       const app = initializeApp(environment.firebaseConfig);
-  
+
       // Inicializar Firestore y obtener referencia al servicio
       const db = getFirestore(app);
       const itemCollection = collection(db, "plants");
-  
+
       // Obtener los datos como observable
       this.items = collectionData(itemCollection) as Observable<Item[]>;
-  
+
       // Suscribirse al observable
       this.items.subscribe(
         (items: Item[]) => {
           // Convertir los datos en un objeto JSON
           // const jsonItems = JSON.stringify(items);
           console.log('ITEMS en formato JSON:', items);
-  
+
           // Resolver la promesa con el JSON
           resolve(items);
         },
