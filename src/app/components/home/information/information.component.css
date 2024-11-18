@@ -1,0 +1,82 @@
+.main-container-info{
+    /* height: 1152px; */
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.historia{
+    width: 510px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.historia Strong{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 40px;
+}
+
+.historia span{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+}
+
+.people{
+    display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.people-card{
+    display: flex;
+    width: 520px;
+    height: 204px;
+}
+
+.people-card-img{
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 16px;
+}
+
+.people-card-content{
+    height: 172px;
+    width: 372px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Maven Pro', sans-serif;
+    text-align: left;
+    margin: 16px, 16px 16px 0px;
+}
+
+.people-card-content Strong{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.cargo{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.resumen{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.mail{
+    width: fit-content;
+    padding: 2px 5px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: black;
+    background: rgb(255, 255, 255, 0.65);
+}
