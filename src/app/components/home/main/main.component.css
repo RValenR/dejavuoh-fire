@@ -1,221 +1,466 @@
-.bodyContainer {
-    /* width: calc(100% - 14.5625rem); */
+.container {
     height: 100vh;
-    /* margin-left: 14.5625rem; */
-    z-index: 0;
-    top: 0;
-    transition: all .3s ease;
-    background-color: #0e0e16;
-    margin-top: 0px;
-    padding: 5rem 1rem 0 1rem;
-    display: flex;
-    flex-direction: column;
-
-    .add-button {
+    background-color: #000001;
+    
+    .main-container {
         display: flex;
-        /* justify-content: flex-end; Alinea el contenido al extremo derecho */
-        gap: 10px;
-        /* Añade espacio entre el botón y el enlace */
-
-        .add-btn {
-            background-color: #02940a;
-            /* Color de fondo del botón */
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0px;
+        margin: 0 20px;
+        .info-container {
             display: flex;
-            align-items: center;
-            cursor: pointer;
-            font-size: 15px;
+            /* align-items: center; */
+            text-align: left;
+            justify-content: center;
+            flex-direction: column;
+            margin-right: 30px;
+
+            .title {
+                color: white;
+                font-family: 'Maven Pro', sans-serif;
+                cursor: default;
+                font-weight: 700;
+                font-size: 36px;
+            }
+
+            .slogan {
+                color: white;
+                font-family: 'Maven Pro', sans-serif;
+                padding: 24px 0px;
+                font-weight: 200;
+                font-size: 16px;
+                cursor: default;
+            }
+
+            .button-services {
+                color: white;
+                background-color: var(--color-rosa);
+                text-align: center;
+                border-radius: 8px;
+                padding: 12px;
+                width: 240px;
+                height: 48px;
+                cursor: pointer;
+            }
         }
 
-        .add-btn i {
-            margin-right: 10px;
-            /* Espacio entre el icono y el texto */
+        .mascota-container {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 30px;
+            /* width: 100%; */
+            /* height: 100%; */
+
+            .title-neon {
+                color: white;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-family: 'Orbitron', sans-serif;
+                font-size: 40px;
+                text-shadow:
+                    0 0 8px var(--color-naranja),
+                    0 0 16px var(--color-naranja),
+                    0 0 24px var(--color-naranja),
+                    0 0 32px var(--color-naranja);
+                transition: text-shadow 0.3s ease;
+                cursor: default;
+            }
+
+            .title-neon:hover {
+                text-shadow:
+                    0 0 12px var(--color-naranja),
+                    0 0 24px var(--color-naranja),
+                    0 0 36px var(--color-naranja),
+                    0 0 48px var(--color-naranja);
+            }
+
+            .img-mascota {
+                width: 347px;
+                height: 347px;
+            }
+
         }
     }
 
-    .panelContainer {
+    .service-container {
         display: flex;
-        flex-direction: row;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        height: 100vh;
+        flex-direction: column;
+        margin: 0 20px;
 
-        .tableContainer {
-            width: 100%;
-            /* height: 100%; */
-            /* margin: 80px 20px 0 20px; */
-            /* margin-top: 80px; */
-            margin-right: 20px;
-            background: #171627;
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid #383838;
+        .service-header {
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 60px 0px;
 
-            .tableStyle {
-                background: #171627;
-                color: aliceblue;
-            }
-
-            .more-button {
+            .service-header-info {
                 display: flex;
-                padding: 0px;
-                /* justify-content: flex-end; Alinea el contenido al extremo derecho */
-                /* gap: 5px; */
-                /* Añade espacio entre el botón y el enlace */
+                flex-direction: column;
+                font-family: 'Maven Pro', sans-serif;
+                width: 860px;
+                height: 168px;
 
-                .more-btn {
-                    background-color: #02940a;
-                    /* Color de fondo del botón */
-                    color: white;
-                    border: none;
-                    padding: 4px 5px;
-                    border-radius: 5px;
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    font-size: 15px;
+                .service-header-title {
+                    cursor: default;
+                    font-weight: 700;
+                    font-size: 40px;
                 }
 
-                .more-btn i {
-                    margin-right: 5px;
-                    /* Espacio entre el icono y el texto */
+                .service-header-text {
+                    cursor: default;
+                    font-weight: 200;
+                    font-size: 16px;
+                    padding: 24px 0px;
+                }
+
+                .service-header-buttons {
+                    display: flex;
+                    text-align: left;
+
+                    .contact-header-button {
+                        border: 1px solid white;
+                        border-radius: 8px;
+                        width: 240px;
+                        height: 48px;
+                        text-align: center;
+                        padding: 12px;
+                        margin-right: 12px;
+                        cursor: pointer;
+                    }
+
+                    .see-more-header-button {
+                        border-radius: 8px;
+                        width: 240px;
+                        height: 48px;
+                        text-align: center;
+                        padding: 12px;
+                        background-color: var(--color-rosa);
+                        cursor: pointer;
+                    }
+
                 }
             }
 
+            .service-header-img {
+                width: 168px;
+                height: 168px;
+                text-align: center;
+
+                .img-mas-header {
+                    transform: rotateY(180deg);
+                    width: 100%;
+                    height: 100%;
+                    scale: 100%;
+                    object-fit: cover;
+                }
+            }
         }
 
-        .rigthPanel {
-            background: rgb(248, 248, 248);
-            width: 100%;
-            /* height: 100vh; */
-            padding: 20px;
-            border-radius: 20px;
+        .service-main {
+            color: white;
+            display: flex;
+            justify-content: center;
 
-            .emptyPanel {
+            .web-img-service {
+                display: flex;
+                flex-direction: column;
+
+                .img-content-service {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 340px;
+
+                    .web-img {
+                        background-color: #666666;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin-right: 40px;
+                        opacity: 50%;
+                    }
+
+                    .web-img-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Orbitron', sans-serif;
+                        font-weight: 300;
+                        font-size: 30px;
+                        cursor: default;
+                    }
+                    .marketing-img-text{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 100%;
+                        text-align: center;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Maven Pro', sans-serif;
+                        font-weight: 300;
+                        font-size: 34px;
+                        cursor: default;
+                    }
+                }
+                .web-service-text{
+                    padding: 12px;
+                    font-family: 'Maven Pro', sans-serif;
+                    font-weight: 300;
+                    font-size: 20px;
+                }
+
+            }
+
+            .marketing-img-service {
+                background-color: #666666;
+                width: 530px;
+                height: 340px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 660px) {
+    .container {
+
+        .main-container {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 0px;
+            flex-direction: column;
+            .info-container {
+                display: flex;
+                /* align-items: center; */
+                text-align: left;
+                justify-content: center;
+                flex-direction: column;
+                margin: 12px;
+    
+                .title {
+                    color: white;
+                    font-family: 'Maven Pro', sans-serif;
+                    cursor: default;
+                    font-weight: 700;
+                    font-size: 36px;
+                }
+    
+                .slogan {
+                    color: white;
+                    font-family: 'Maven Pro', sans-serif;
+                    padding: 24px 0px;
+                    font-weight: 200;
+                    font-size: 16px;
+                    cursor: default;
+                }
+    
+                .button-services {
+                    color: white;
+                    background-color: var(--color-rosa);
+                    text-align: center;
+                    border-radius: 8px;
+                    padding: 12px;
+                    width: 100%;
+                    height: 48px;
+                    cursor: pointer;
+                }
+            }
+    
+            .mascota-container {
+                width: 100%;
+                display: flex;
                 text-align: center;
                 align-items: center;
-                margin-top: 40vh;
-                color: #383838;
+                justify-content: center;
+                /* flex-direction: column; */
+                margin: 12px;
+                /* width: 100%; */
+                /* height: 100%; */
+    
+                .title-neon {
+                    color: white;
+                    margin: 12px;
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 40px;
+                    text-shadow:
+                        0 0 8px var(--color-naranja),
+                        0 0 16px var(--color-naranja),
+                        0 0 24px var(--color-naranja),
+                        0 0 32px var(--color-naranja);
+                    transition: text-shadow 0.3s ease;
+                    cursor: default;
+                }
+    
+                .title-neon:hover {
+                    text-shadow:
+                        0 0 12px var(--color-naranja),
+                        0 0 24px var(--color-naranja),
+                        0 0 36px var(--color-naranja),
+                        0 0 48px var(--color-naranja);
+                }
+    
+                .img-mascota {
+                    width: 200px;
+                    height: 200px;
+                }
+    
+            }
+        }
+    }
+
+    .service-container {
+        display: flex;
+        flex-direction: column;
+
+        .service-header {
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 12px 12px 50px 12px !important;
+            /* margin: 0px 12px 40px 12px; */
+
+            .service-header-info {
+                width: 100px;
+                display: flex;
+                flex-direction: column;
+                font-family: 'Maven Pro', sans-serif;
+                
+                /* height: 168px; */
+
+                .service-header-title {
+                    cursor: default;
+                    margin: 0px;
+                    font-weight: 500;
+                    font-size: 30px;
+                }
+
+                .service-header-text {
+                    cursor: default;
+                    font-weight: 200;
+                    font-size: 16px;
+                    padding: 24px 0px;
+                }
+
+                .service-header-buttons {
+                    display: flex;
+                    text-align: center;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .contact-header-button {
+                        border: 1px solid white;
+                        border-radius: 8px;
+                        width: 100% !important;
+                        height: 48px;
+                        text-align: center;
+                        cursor: pointer;
+                        margin-bottom: 12px;
+                    }
+
+                    .see-more-header-button {
+                        border-radius: 8px;
+                        width: 100% !important;
+                        height: 48px;
+                        text-align: center;
+                        background-color: var(--color-rosa);
+                        cursor: pointer;
+                    }
+
+                }
             }
 
-            .dataPanel {
-                .panelImage {
-                    height: 50vh;
+            .service-header-img {
+                display: none;
+                width: 268px;
+                height: 268px;
+                text-align: center;
+
+                .img-mas-header {
+                    transform: rotateY(180deg);
+                    width: 80px;
+                    height: 80px;
+                    scale: 100%;
+                    object-fit: cover;
                 }
             }
         }
 
+        .service-main {
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+            flex-direction: column;
+            text-align: center;
+
+            .web-img-service {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .img-content-service {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100% !important;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 12px;
+                    
+
+                    .web-img {
+                        background-color: #666666;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin-right: 0px !important;
+                        opacity: 50%;
+                    }
+
+                    .web-img-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Orbitron', sans-serif;
+                        font-weight: 300;
+                        font-size: 30px;
+                        cursor: default;
+                    }
+                    .marketing-img-text{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 100%;
+                        text-align: center;
+                        transform: translate(-50%, -50%);
+                        font-family: 'Maven Pro', sans-serif;
+                        font-weight: 300;
+                        font-size: 34px;
+                        cursor: default;
+                    }
+                }
+                .web-service-text{
+                    padding: 12px;
+                    font-family: 'Maven Pro', sans-serif;
+                    font-weight: 300;
+                    font-size: 20px;
+                }
+
+            }
+
+            .marketing-img-service {
+                background-color: #666666;
+                width: 530px;
+                height: 340px;
+            }
+        }
     }
-
-
-
 }
-
-/* .body-trimmed-aux {
-    width: calc(100% - 14.5625rem);
-    margin-left: 14.5625rem;
-}
-
-.body-md-screen-aux {
-    width: calc(100% - 5rem);
-    margin-left: 5rem;
-
-} */
-
-/* .topbar {
-    width: calc(100% - 14.5625rem);
-    margin-left: 14.5625rem;
-    position: fixed;
-    transition: all .3s ease;
-    z-index: 1;
-}
-
-.topbarExpanded {
-    width: calc(100% - 14.5625rem);
-    margin-left: 14.5625rem;
-}
-
-.topbarUnexpanded {
-    width: calc(100% - 5rem);
-    margin-left: 5rem;
-} */
-
-
-/* 
-.bodyContainer {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-}
-
-button {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #333333;
-}
-
-.all-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.container {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 300px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"], input[type="email"], input[type="date"], textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #333333;
-    color: #e0e0e0;
-}
-
-input[type="file"] {
-    color: #e0e0e0;
-}
-
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.images .container {
-    margin: 10px;
-}
-
-img {
-    border-radius: 10px;
-}
-
-p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #b0b0b0;
-} */

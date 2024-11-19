@@ -1,6 +1,75 @@
 <div class="container">
     <app-topbar></app-topbar>
     <div class="main-container">
-        pagina principal
+        <div class="info-container">
+            <div class="title">
+                Bienvenido a Dejavuoh Tech
+            </div>
+            <div class="slogan">
+                Impulsamos tu identidad digital y la operatividad de tu negocio.
+            </div>
+            <div class="button-services" routerLink="/servicios" routerLinkActive="active">
+                Ver servicios
+                <i class="icon"><fa-icon [icon]="faAngleRight"></fa-icon></i>
+            </div>
+        </div>
+        
+        <div class="mascota-container">
+            <div class="title-neon">
+                Construye tu <br> mundo digital perfecto
+            </div>
+            <img class="img-mascota" src="assets/images/mascota-sinFondo.webp" alt="">
+        </div>
     </div>
+    <app-team-bar [showButton]="mostrarBotonTeamBar"></app-team-bar>
+    <div class="service-container">
+        <div class="service-header">
+            <div class="service-header-info">
+                <div class="service-header-title">
+                    Nuestros servicios
+                </div>
+                <div class="service-header-text">
+                    Transformamos tu experiencia digital.
+                </div>
+                <div class="service-header-buttons">
+                    <div class="contact-header-button" routerLink="/contactos" routerLinkActive="active">
+                        Contactanos
+                    </div>
+                    <div class="see-more-header-button" routerLink="/servicios" routerLinkActive="active">
+                        Ver más
+                    </div>
+                </div>
+            </div>
+            <div class="service-header-img">
+                <img class="img-mas-header" src="assets/images/mas_2-sinFondo-hd.webp" alt="">
+            </div>
+            
+        </div>
+        <div class="service-main">
+            <div class="web-img-service">
+                <div class="img-content-service">
+                    <img src="assets/images/web-img.webp" alt="" class="web-img">
+                    <div class="web-img-text">
+                        Desarrollo web
+                    </div>
+                </div>
+                <div class="web-service-text">
+                    
+                </div>
+            </div>
+            <div class="web-img-service">
+                <div class="img-content-service">
+                    <img src="assets\images\marketing-img.webp" alt="" class="web-img">
+                    <div class="marketing-img-text">
+                        Marketing digital
+                    </div>
+                </div>
+                <div class="web-service-text">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-contact-block [showImage]=false [showForm]=true></app-contact-block>
+    <app-footer></app-footer>
 </div>
