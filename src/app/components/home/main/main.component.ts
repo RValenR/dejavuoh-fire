@@ -7,7 +7,6 @@ import { MainService } from '../../../services/main/main.service';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
-import { SidebarComponent } from '../../commons/sidebar/sidebar.component';
 import { TopbarComponent } from '../../commons/topbar/topbar.component';
 import { TableModule } from 'primeng/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
