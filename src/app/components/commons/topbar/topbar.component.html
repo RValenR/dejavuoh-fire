@@ -3,7 +3,17 @@
         <img class="img-logo" src="assets/images/Logo8-4.png" alt="">
     </div>
 
-    <div class="top-menu">
+    
+  <!-- Botón del menú hamburguesa -->
+
+  <div class="menu-bar" (click)="toggleMenu()">
+    <i class="icon-menu"><fa-icon [icon]="faBars"></fa-icon></i>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+    <div class="top-menu" [class.open]="menuOpen">
         <ul>
             <li routerLink="/main" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</li>
             <li routerLink="/servicios" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Servicios</li>

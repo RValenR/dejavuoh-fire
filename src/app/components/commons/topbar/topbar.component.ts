@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSignOut, faPlus, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSignOut, faPlus, faMoon, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-topbar',
@@ -13,15 +13,17 @@ import { faSignOut, faPlus, faMoon } from '@fortawesome/free-solid-svg-icons';
 export class TopbarComponent {
   @Output() actionSelected: EventEmitter<any> = new EventEmitter();
 
-  faSignOut = faSignOut;
-  faPlus = faPlus;
-  faMoon = faMoon;
+  faBars = faBars;
+  menuOpen = true;
 
   addNewData() {
     this.actionSelected.emit({ action: 'addNew' })
   }
   logOut(){
     this.actionSelected.emit({ action: 'logOut' })
+  }
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen; // Alterna el estado del menú
   }
 }

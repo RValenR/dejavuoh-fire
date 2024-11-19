@@ -17,6 +17,14 @@
         }
     }
 
+    .menu-bar{
+        display: none;
+
+        .icon-menu{
+            color: #fff;
+        }
+    }
+
     .top-menu {
         position: relative;
         justify-content: end;
@@ -63,4 +71,105 @@
                 0 0 4px var(--color-rosa); */
         }
     }
+}
+
+@media (max-width: 660px) {
+    .topbar {
+        background-color: #000001;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        /* position: relative; */
+    
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            flex: 0 0 auto;
+            margin-left: 40px;
+    
+            .img-logo {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    
+        .menu-bar{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+
+            .icon-menu{
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    
+        .top-menu {
+            display: none;
+            position: relative;
+            justify-content: end;
+            /* left: 50%; */
+            /* transform: translateX(-50%); */
+            /* border: 1px solid white; */
+            color: white;
+            /* width: 800px; */
+            height: 80px;
+            padding: 20px 0px;
+            text-align: center;
+            font-family: 'Maven Pro', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+    
+            ul {
+                list-style-type: none;
+                margin: 0;
+                /* padding: 10px; */
+            }
+    
+            ul li {
+                display: inline-block;
+                /* margin-right: 30px; */
+                /* border-radius: 12px; */
+                padding: 3px 10px;
+                background-color: transparent;
+                border: 3px solid transparent;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+    
+            ul li.active {
+                border-bottom: 3px solid var(--color-rosa);
+                color: #ffffff;
+                text-align: center;
+                background-color: transparent;
+                /* transition: box-shadow 0.3s ease, border 0.3s ease; */
+    
+                /* Efecto neón con sombra */
+                /* box-shadow:
+                    0 0 1px var(--color-rosa),
+                    0 0 2px var(--color-rosa),
+                    0 0 4px var(--color-rosa); */
+            }
+        }
+
+        .top-menu.open {
+            display: flex; /* Mostrar menú desplegable */
+            text-align: left;
+          }
+        
+          .top-menu ul {
+            flex-direction: column;
+            /* gap: 10px; */
+          }
+        
+          .top-menu ul li {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+            margin: 0 10px;
+          }
+    }
+    
 }

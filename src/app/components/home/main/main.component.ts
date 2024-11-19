@@ -11,7 +11,7 @@ import { SidebarComponent } from '../../commons/sidebar/sidebar.component';
 import { TopbarComponent } from '../../commons/topbar/topbar.component';
 import { TableModule } from 'primeng/table';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faEye, faPlus, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { RouterModule } from '@angular/router';
 import { TeamBarComponent } from '../../commons/team-bar/team-bar.component';
 import { ContactBlockComponent } from '../../commons/contact-block/contact-block.component';
@@ -27,14 +27,13 @@ interface SideNavToggle {
   selector: 'app-main',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FormsModule, ButtonModule, 
-    InputTextModule, DialogModule, SidebarComponent, TopbarComponent, TableModule, FontAwesomeModule, RouterModule,
+    InputTextModule, DialogModule, TopbarComponent, TableModule, FontAwesomeModule, RouterModule,
     TeamBarComponent, ContactBlockComponent, FooterComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-  faEye = faEye;
-  faPlus = faPlus;
+ 
   faAngleRight = faAngleRight;
 
   isModalOpen = false;
