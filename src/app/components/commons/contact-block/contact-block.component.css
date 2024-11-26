@@ -151,37 +151,6 @@
                 width: 400px;
                 height: 150px !important;
     
-                .img-text {
-                    /* background-color: #666666; */
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    margin-right: 40px;
-                    opacity: 40%;
-                    scale: 100%;
-                }
-            }
-    
-    
-            .text-block {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                cursor: default;
-                width: 100%;
-    
-    
-                .contact-text-title {
-                    font-weight: 700;
-                    font-size: 40px;
-                    margin-bottom: 24px;
-                }
-    
-                .contact-text-message {
-                    font-weight: 200;
-                    font-size: 16px;
-                }
             }
     
     
@@ -197,26 +166,6 @@
             
     
             .contact-form {
-                display: flex;
-                flex-direction: column;
-                font-family: 'Maven Pro', sans-serif;
-                font-weight: 200;
-                font-size: 14px;
-                margin-left: 0px ;
-                width: 100%;
-                input {
-                    height: 36px;
-                    border-radius: 8px;
-                    margin-bottom: 20px;
-                    margin-top: 4px;
-                }
-    
-                textarea {
-                    height: 96px;
-                    border-radius: 8px;
-                    margin-bottom: 40px;
-                    margin-top: 4px;
-                }
     
                 .btn-submit {
                     width: 100%;
@@ -232,18 +181,7 @@
             }
     
             .btn-nav-contact {
-                display: flex;
-                justify-content: center;
                 width: 100%;
-                height: 48px;
-                border-radius: 8px;
-                background-color: var(--color-rosa);
-                padding: 12px;
-                color: white;
-                cursor: pointer;
-                font-family: 'Maven Pro', sans-serif;
-                font-weight: 200;
-                font-size: 14px;
                 margin-left: 0px !important;
             }
         }

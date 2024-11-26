@@ -1,41 +1,29 @@
 .container {
-    height: 100vh;
-    background-color: #000001;
-    
     .main-container {
         display: flex;
-        text-align: center;
-        align-items: center;
         justify-content: center;
         padding: 40px 0px;
         margin: 0 20px;
+        color: white;
         .info-container {
             display: flex;
-            /* align-items: center; */
             text-align: left;
             justify-content: center;
             flex-direction: column;
             margin-right: 30px;
-
+            font-family: 'Maven Pro', sans-serif;
+            cursor: default;
             .title {
-                color: white;
-                font-family: 'Maven Pro', sans-serif;
-                cursor: default;
                 font-weight: 700;
                 font-size: 36px;
             }
-
             .slogan {
-                color: white;
-                font-family: 'Maven Pro', sans-serif;
                 padding: 24px 0px;
                 font-weight: 200;
                 font-size: 16px;
-                cursor: default;
             }
 
             .button-services {
-                color: white;
                 background-color: var(--color-rosa);
                 text-align: center;
                 border-radius: 8px;
@@ -45,7 +33,6 @@
                 cursor: pointer;
             }
         }
-
         .mascota-container {
             display: flex;
             text-align: center;
@@ -53,11 +40,7 @@
             justify-content: center;
             flex-direction: column;
             margin-left: 30px;
-            /* width: 100%; */
-            /* height: 100%; */
-
             .title-neon {
-                color: white;
                 margin-top: 10px;
                 margin-bottom: 20px;
                 font-family: 'Orbitron', sans-serif;
@@ -70,58 +53,39 @@
                 transition: text-shadow 0.3s ease;
                 cursor: default;
             }
-
-            .title-neon:hover {
-                text-shadow:
-                    0 0 12px var(--color-naranja),
-                    0 0 24px var(--color-naranja),
-                    0 0 36px var(--color-naranja),
-                    0 0 48px var(--color-naranja);
-            }
-
             .img-mascota {
                 width: 347px;
                 height: 347px;
             }
-
         }
     }
-
     .service-container {
         display: flex;
         flex-direction: column;
         margin: 0 20px;
-
+        color: white;
         .service-header {
-            color: white;
             display: flex;
             justify-content: center;
             padding: 60px 0px;
-
             .service-header-info {
                 display: flex;
                 flex-direction: column;
                 font-family: 'Maven Pro', sans-serif;
                 width: 860px;
-                height: 168px;
-
+                cursor: default;
                 .service-header-title {
-                    cursor: default;
                     font-weight: 700;
                     font-size: 40px;
                 }
-
                 .service-header-text {
-                    cursor: default;
                     font-weight: 200;
                     font-size: 16px;
                     padding: 24px 0px;
                 }
-
                 .service-header-buttons {
                     display: flex;
                     text-align: left;
-
                     .contact-header-button {
                         border: 1px solid white;
                         border-radius: 8px;
@@ -132,7 +96,6 @@
                         margin-right: 12px;
                         cursor: pointer;
                     }
-
                     .see-more-header-button {
                         border-radius: 8px;
                         width: 240px;
@@ -142,15 +105,12 @@
                         background-color: var(--color-rosa);
                         cursor: pointer;
                     }
-
                 }
             }
-
             .service-header-img {
                 width: 168px;
                 height: 168px;
                 text-align: center;
-
                 .img-mas-header {
                     transform: rotateY(180deg);
                     width: 100%;
@@ -160,31 +120,25 @@
                 }
             }
         }
-
         .service-main {
-            color: white;
             display: flex;
             justify-content: center;
-
             .web-img-service {
                 display: flex;
                 flex-direction: column;
-
                 .img-content-service {
                     position: relative;
                     overflow: hidden;
                     width: 100%;
                     height: 340px;
-
+                    cursor: default;
                     .web-img {
-                        background-color: #666666;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
                         margin-right: 40px;
                         opacity: 50%;
                     }
-
                     .web-img-text {
                         position: absolute;
                         top: 50%;
@@ -193,9 +147,8 @@
                         font-family: 'Orbitron', sans-serif;
                         font-weight: 300;
                         font-size: 30px;
-                        cursor: default;
                     }
-                    .marketing-img-text{
+                    .marketing-img-text {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -205,261 +158,78 @@
                         font-family: 'Maven Pro', sans-serif;
                         font-weight: 300;
                         font-size: 34px;
-                        cursor: default;
                     }
                 }
-                .web-service-text{
-                    padding: 12px;
-                    font-family: 'Maven Pro', sans-serif;
-                    font-weight: 300;
-                    font-size: 20px;
-                }
-
             }
-
             .marketing-img-service {
-                background-color: #666666;
                 width: 530px;
                 height: 340px;
             }
         }
     }
-
 }
 
 @media (max-width: 660px) {
     .container {
-
         .main-container {
             display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 0px;
             flex-direction: column;
             .info-container {
-                display: flex;
-                /* align-items: center; */
-                text-align: left;
-                justify-content: center;
-                flex-direction: column;
-                margin: 12px;
-    
-                .title {
-                    color: white;
-                    font-family: 'Maven Pro', sans-serif;
-                    cursor: default;
-                    font-weight: 700;
-                    font-size: 36px;
-                }
-    
-                .slogan {
-                    color: white;
-                    font-family: 'Maven Pro', sans-serif;
-                    padding: 24px 0px;
-                    font-weight: 200;
-                    font-size: 16px;
-                    cursor: default;
-                }
-    
                 .button-services {
-                    color: white;
-                    background-color: var(--color-rosa);
-                    text-align: center;
-                    border-radius: 8px;
-                    padding: 12px;
                     width: 100%;
-                    height: 48px;
-                    cursor: pointer;
                 }
             }
-    
             .mascota-container {
                 width: 100%;
-                display: flex;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                /* flex-direction: column; */
                 margin: 12px;
-                /* width: 100%; */
-                /* height: 100%; */
-    
-                .title-neon {
-                    color: white;
-                    margin: 12px;
-                    font-family: 'Orbitron', sans-serif;
-                    font-size: 40px;
-                    text-shadow:
-                        0 0 8px var(--color-naranja),
-                        0 0 16px var(--color-naranja),
-                        0 0 24px var(--color-naranja),
-                        0 0 32px var(--color-naranja);
-                    transition: text-shadow 0.3s ease;
-                    cursor: default;
-                }
-    
-                .title-neon:hover {
-                    text-shadow:
-                        0 0 12px var(--color-naranja),
-                        0 0 24px var(--color-naranja),
-                        0 0 36px var(--color-naranja),
-                        0 0 48px var(--color-naranja);
-                }
-    
                 .img-mascota {
                     width: 200px;
                     height: 200px;
                 }
-    
             }
         }
     }
-
-    .service-container {
-        display: flex;
-        flex-direction: column;
-
-        .service-header {
-            color: white;
-            display: flex;
-            justify-content: center;
-            padding: 12px 12px 50px 12px !important;
-            /* margin: 0px 12px 40px 12px; */
-
-            .service-header-info {
-                width: 100px;
-                display: flex;
-                flex-direction: column;
-                font-family: 'Maven Pro', sans-serif;
-                
-                /* height: 168px; */
-
-                .service-header-title {
-                    cursor: default;
-                    margin: 0px;
-                    font-weight: 500;
-                    font-size: 30px;
-                }
-
-                .service-header-text {
-                    cursor: default;
-                    font-weight: 200;
-                    font-size: 16px;
-                    padding: 24px 0px;
-                }
-
-                .service-header-buttons {
-                    display: flex;
-                    text-align: center;
-                    flex-direction: column;
-                    width: 100%;
-
-                    .contact-header-button {
-                        border: 1px solid white;
-                        border-radius: 8px;
-                        width: 100% !important;
-                        height: 48px;
-                        text-align: center;
-                        cursor: pointer;
-                        margin-bottom: 12px;
-                    }
-
-                    .see-more-header-button {
-                        border-radius: 8px;
-                        width: 100% !important;
-                        height: 48px;
-                        text-align: center;
-                        background-color: var(--color-rosa);
-                        cursor: pointer;
-                    }
-
-                }
+    .service-header {
+        padding: 12px 12px 50px 12px !important;
+        .service-header-info {
+            width: 100px;
+            .service-header-title {
+                cursor: default;
+                margin: 0px;
+                font-weight: 500;
+                font-size: 30px;
             }
-
-            .service-header-img {
-                display: none;
-                width: 268px;
-                height: 268px;
+            .service-header-buttons {
                 text-align: center;
-
-                .img-mas-header {
-                    transform: rotateY(180deg);
-                    width: 80px;
-                    height: 80px;
-                    scale: 100%;
-                    object-fit: cover;
+                flex-direction: column;
+                width: 100%;
+                .contact-header-button {
+                    width: 100% !important;
+                    margin-bottom: 12px;
+                }
+                .see-more-header-button {
+                    width: 100% !important;
                 }
             }
         }
-
-        .service-main {
-            color: white;
-            display: flex;
-            justify-content: center;
-            margin-top: 60px;
-            flex-direction: column;
-            text-align: center;
-
-            .web-img-service {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                .img-content-service {
-                    position: relative;
-                    overflow: hidden;
-                    width: 100% !important;
-                    justify-content: center;
-                    text-align: center;
-                    margin: 12px;
-                    
-
-                    .web-img {
-                        background-color: #666666;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        margin-right: 0px !important;
-                        opacity: 50%;
-                    }
-
-                    .web-img-text {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-family: 'Orbitron', sans-serif;
-                        font-weight: 300;
-                        font-size: 30px;
-                        cursor: default;
-                    }
-                    .marketing-img-text{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        width: 100%;
-                        text-align: center;
-                        transform: translate(-50%, -50%);
-                        font-family: 'Maven Pro', sans-serif;
-                        font-weight: 300;
-                        font-size: 34px;
-                        cursor: default;
-                    }
+        .service-header-img {
+            display: none;
+        }
+    }
+    .service-main {
+        margin-top: 60px;
+        flex-direction: column;
+        text-align: center;
+        .web-img-service {
+            align-items: center;
+            .img-content-service {
+                width: 100% !important;
+                justify-content: center;
+                text-align: center;
+                margin: 12px;
+                .web-img {
+                    margin-right: 0px !important;
                 }
-                .web-service-text{
-                    padding: 12px;
-                    font-family: 'Maven Pro', sans-serif;
-                    font-weight: 300;
-                    font-size: 20px;
-                }
-
-            }
-
-            .marketing-img-service {
-                background-color: #666666;
-                width: 530px;
-                height: 340px;
             }
         }
     }
