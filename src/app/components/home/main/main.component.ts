@@ -60,15 +60,9 @@ export class MainComponent {
     // this.firebaseService.pageStyle = 'body-trimmed-aux'
   }
 
-  // async fetchItems() {
-  //   try {
-  //     const jsonItems = await this.dataService.getElements()
-  //     this.items = jsonItems;
-  //     console.log('Datos recibidos:', jsonItems);
-  //   } catch (error) {
-  //     console.error('Error al obtener los datos:', error);
-  //   }
-  // }
+  navigateToService(flag: boolean){
+    this.router.navigate(['/servicios'], { state: { flag } });
+  }
 
   showInPanel(element:any){
     console.log(element);

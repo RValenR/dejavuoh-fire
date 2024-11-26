@@ -131,7 +131,7 @@
                     overflow: hidden;
                     width: 100%;
                     height: 340px;
-                    cursor: default;
+                    cursor: pointer;
                     .web-img {
                         width: 100%;
                         height: 100%;
@@ -159,6 +159,9 @@
                         font-weight: 300;
                         font-size: 34px;
                     }
+                }
+                .img-content-service:hover {
+                    transform: scale(1.05);
                 }
             }
             .marketing-img-service {

@@ -3,6 +3,7 @@ import { TopbarComponent } from '../../commons/topbar/topbar.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../commons/footer/footer.component';
 import { ContactBlockComponent } from '../../commons/contact-block/contact-block.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-services',
   standalone: true,
@@ -17,7 +18,18 @@ export class ServicesComponent {
   isActiveDM:boolean = true;
   isActiveWeb:boolean=false;
   costumHeight = "200px"
+  flag: boolean | undefined;
 
+  constructor(private router: Router) {
+    const navigation = this.router.getCurrentNavigation();
+    this.flag = navigation?.extras?.state?.['flag'];
+    if(this.flag){
+      this.mostrarDesarrolloWeb()
+    }else{
+      this.mostrarDigitalMarketing()
+    }
+  }
+  
   mostrarDigitalMarketing(){
     this.showMarketing = true;
     this.showDesarrolloWeb = false;
