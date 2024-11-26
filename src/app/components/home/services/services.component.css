@@ -204,18 +204,41 @@ button.active{
 }
 
 /* Estilos responsivos */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 660px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
     .content-layout {
         flex-direction: column; /* Elementos en columna en pantallas pequeñas */
         align-items: center; /* Centra los elementos */
     }
+    .img-container{
+        display: none;
+    }
 
     .img-derecha, .img-izquierda {
+        display: none;
         width: 80%;
         margin: 10px 0; /* Espacio entre la imagen y el contenido */
     }
 
     .text-container {
-        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 16px 100px;
+    }
+    .cuadros-container{
+        display: flex;
+        flex-direction: column;
+        margin: 16px;
+    }
+
+    .cuadro{
+        width: 100%;
+    }
+
+    app-contact-block{
+        margin-top: 600px;
     }
 }
