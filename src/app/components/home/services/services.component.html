@@ -1,6 +1,129 @@
 <div class="container">
     <app-topbar></app-topbar>
-    <div class="main-container">
-        Pagina de servicios
+    <div class="background">
+        <!-- Encabezado -->
+        <section class="header-section">
+            <h1>Bienvenidos al Futuro de los Servicios</h1>
+            <h2 class="description-services">Explora nuestras innovadoras ofertas en Marketing <br>Digital y Desarrollo Web</h2>
+            <div class="navbar">
+                <button id="btnDigitalMarketing" class="{{ isActiveDM ? 'active' : 'test' }}" (click)="mostrarDigitalMarketing()">Digital Marketing</button>
+                <button id="btnDesarrolloWeb" class="{{ isActiveWeb ? 'active' : '' }}" (click)="mostrarDesarrolloWeb()">Desarrollo Web</button>
+            </div>
+        </section>
+
+        <!-- Sección dinámica -->
+        <div id="contenido">
+            <!-- Aquí se mostrará el contenido dinámico de Digital Marketing o Desarrollo Web -->
+            <div class="main-container">
+                <div *ngIf="showMarketing" class="content-layout">
+                    <div class="img-container rotatedDm-img">
+                        <img src="../../../../assets/images/mas_2-sinFondo-hd.webp" alt="Figura Desarrollo Web" class="img-derecha">
+                    </div>
+                    <div class="text-container">
+                        <h2 class="text-container-tittle">Digital Marketing</h2>
+                        <div class="cuadros-container">
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/SEO.webp');">
+                                        <h3 class="cuadrado-title">SEO</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Optimización de motores de búsqueda para mejorar la visibilidad de un sitio web.</p>
+                                </div>
+                            </div>
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/PautaDigital.webp');">
+                                        <h3 class="cuadrado-title">Pauta Digital</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Uso de plataformas sociales para conectar con la audiencia y promover productos o servicios.</p>
+                                </div>
+                            </div>
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/CommunityManager.webp');">
+                                        <h3 class="cuadrado-title">Community Manager</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Envío de correos electrónicos personalizados para atraer y mantener clientes.</p>
+                                </div>
+                            </div>
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/Dise;oPosts.webp');">
+                                        <h3 class="cuadrado-title">Diseño de Posts</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Creación y distribución de contenido valioso para atraer a una audiencia específica.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div *ngIf="showDesarrolloWeb" class="content-layout">
+                    <div class="text-container">
+                        <h2>Desarrollo Web</h2>
+                        <div class="cuadros-container">
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/Dise;oUX-UI.webp');">
+                                        <h3 class="cuadrado-title">Diseño UX/UI</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Optimización de motores de búsqueda para mejorar la visibilidad de un sitio web.</p>
+                                </div>
+                            </div>
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/sistemas-admin.webp');">
+                                        <h3 class="cuadrado-title">Distemas de administracion</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Uso de plataformas sociales para conectar con la audiencia y promover productos o servicios.</p>
+                                </div>
+                            </div>
+                            <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('../../../../assets/images/landing-page.webp');">
+                                        <h3 class="cuadrado-title">Paginas web</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Envío de correos electrónicos personalizados para atraer y mantener clientes.</p>
+                                </div>
+                            </div>
+                            <!-- <div class="cuadro-contenedor">
+                                <div class="cuadro">
+                                    <div class="cuadro-bg" style="background-image: url('img/content_marketing_bg.jpg');">
+                                        <h3>Content Marketing</h3>
+                                    </div>
+                                </div>
+                                <div class="descripcion">
+                                    <p>Creación y distribución de contenido valioso para atraer a una audiencia específica.</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <img src="../../../../assets/images/mas_3-sinFondo-hd.webp" alt="Figura Digital Marketing" class="img-izquierda rotated-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        
     </div>
+
+    <app-contact-block [showImage]=false [showForm]=false [costumHeigh]=costumHeight></app-contact-block>
+        <app-footer></app-footer>
+
 </div>

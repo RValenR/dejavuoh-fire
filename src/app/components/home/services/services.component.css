@@ -1,0 +1,221 @@
+/* Estilos generales */
+body {
+    font-family: 'Maven Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.description-services{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+/* Estilo para los botones */
+button {
+    background-color: transparent;
+    color: white;
+    font-family: 'Orbitron', sans-serif; /* Estilo de fuente Maven Pro */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 10px 0;
+}
+
+/* Asegúrate de que esto esté fuera de otros selectores y sea más específico si es necesario */
+button:hover {
+    color: #ff00ff;
+}
+
+button.active{
+    color: #ff00ff;
+}
+
+
+
+/* Layout general para los cuadros y la imagen */
+.content-layout {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0;
+    width: 100%;
+}
+
+/* Contenedor de texto con los cuadros */
+.text-container {
+    width: 520px;
+    height: 788px;
+    /* padding: 30px; */
+    margin-left: 30px;
+}
+
+.text-container-tittle{
+    font-size: 40px;
+    cursor: default;
+}
+
+/* Ajustes de los cuadros de contenido */
+.cuadros-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    text-align: center;
+}
+
+/* Estilo para los cuadros */
+.cuadro-contenedor {
+    text-align: center;
+}
+
+.cuadro {
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Texto en blanco */
+    transition: transform 0.3s, background-color 0.3s, border-color 0.3s;
+    width: 240px; /* Ajustar para hacer los cuadros cuadrados */
+    height: 240px; /* Ajustar para hacer los cuadros cuadrados */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cuadrado-title{
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima del fondo */
+    color: white; /* Ajusta el color según sea necesario */
+    text-align: center;
+    margin: 0;
+    line-height: 30px; 
+    cursor: default;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Estilo para el fondo de los cuadros */
+.cuadro-bg {
+    width: 100%;
+    height: 100%; /* Los cuadros serán cuadrados */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    flex-grow: 1; /* Hace que la imagen ocupe la mayor parte del espacio */
+    display: flex;
+    justify-content: center; /* Centra el título en el cuadro */
+    align-items: center; /* Centra el título en el cuadro */
+    /* opacity: 60%; */
+}
+
+.cuadro-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Reutiliza la imagen de fondo */
+    opacity: 0.5; /* Ajusta la opacidad */
+    z-index: 1;
+    filter: brightness(0.1); /* Opcional: puedes oscurecer el fondo */
+}
+
+/* Efecto hover en los cuadros */
+.cuadro:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Cambiar fondo al pasar el ratón */
+    border: 4px solid #ff00bf;
+    transform: scale(1.05);
+    /* transition: 0.3s; */
+}
+
+/* Descripción debajo de los cuadros */
+.descripcion {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    cursor: default;
+}
+
+/* Estilo para la imagen */
+.img-container {
+    width: 520px; 
+    height: 788px;
+}
+
+.img-derecha, .img-izquierda {
+    width: 80%;
+    margin: 30px;
+}
+
+.rotated-img{
+    transform: scaleX(-1);
+}
+
+.rotated-img:hover {
+    transform: scaleX(-1) rotate(25deg);
+    transition: 0.3s;
+    /* transform: rotate(45deg); */
+}
+
+
+
+.rotatedDm-img:hover {
+    transform: rotate(-15deg);
+    transition: 0.3s;
+    /* transform: rotate(45deg); */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .content-layout {
+        flex-direction: column; /* Elementos en columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .img-derecha, .img-izquierda {
+        width: 80%;
+        margin: 10px 0; /* Espacio entre la imagen y el contenido */
+    }
+
+    .text-container {
+        width: 80%;
+    }
+}
