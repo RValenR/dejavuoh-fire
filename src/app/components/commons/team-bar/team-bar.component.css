@@ -1,13 +1,9 @@
 .container {
-    /* height: 228px; */
-    /* width: 100%; */
     background-color: #666666;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-
-
     .extra-movil-class {
         display: flex;
         text-align: left;
@@ -15,24 +11,19 @@
         justify-content: left;
         width: 800px;
         margin-left: 20px;
-
         .img-oul {
             background-color: rgb(0, 0, 0);
             width: 100px;
             height: 100px;
             border-radius: 999px;
-
             .img-mas4 {
                 width: 100px;
                 height: 100px;
             }
         }
-
         .info {
-           
             text-align: left;
             padding: 60px 40px;
-
             .title {
                 color: white;
                 font-family: 'Maven Pro', sans-serif;
@@ -40,26 +31,22 @@
                 font-size: 24px;
                 cursor: default;
             }
-
             .characteristics {
                 text-align: left;
                 font-family: 'Maven Pro', sans-serif;
                 font-weight: 400;
                 font-size: 12px;
-
                 ul {
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
                     height: 20px;
                     margin: 12px 0px;
-                    /* padding: 10px; */
                 }
-
                 ul li {
                     display: inline-block;
                     border-radius: 2px;
-                    margin-right: 6px;
+                    margin: 3px;
                     /* padding: 3px 10px; */
                     background-color: transparent;
                     border: 3px solid transparent;
@@ -68,13 +55,13 @@
                     background-color: #d9d9d98f;
                 }
             }
-
             .message {
                 color: white;
                 font-family: 'Maven Pro', sans-serif;
                 font-weight: 200;
                 font-size: 16px;
                 cursor: default;
+                margin-top: 20px;
             }
         }
     }
@@ -96,6 +83,7 @@
         }
 
     }
+
 }
 
 @media (max-width: 660px) {
@@ -136,6 +124,10 @@
             margin: 20px;
             padding: 0 20px;
 
+        }
+
+        .characteristics{
+            height: 40px;
         }
     }
 }
