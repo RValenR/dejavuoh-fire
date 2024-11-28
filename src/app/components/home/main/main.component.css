@@ -177,14 +177,16 @@
         .main-container {
             display: flex;
             flex-direction: column;
+            padding: 0;
             .info-container {
+                margin-right: 0px;
                 .button-services {
                     width: 100%;
                 }
             }
             .mascota-container {
                 width: 100%;
-                margin: 12px;
+                margin: 12px 0px;
                 .img-mascota {
                     width: 200px;
                     height: 200px;
@@ -193,9 +195,10 @@
         }
     }
     .service-header {
-        padding: 12px 12px 50px 12px !important;
+        padding: 0px 0px 0px 0px !important;
         .service-header-info {
             width: 100px;
+            padding: 12px 0;
             .service-header-title {
                 cursor: default;
                 margin: 0px;

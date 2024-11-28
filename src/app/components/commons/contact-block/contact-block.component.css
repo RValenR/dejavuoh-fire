@@ -134,7 +134,7 @@
     .contact-container {
         display: flex;
         align-items: center;
-        padding: 12px !important;
+        padding: 0px !important;
         justify-content: center;
         flex-direction: column;
     

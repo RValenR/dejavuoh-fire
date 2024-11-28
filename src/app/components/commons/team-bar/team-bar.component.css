@@ -96,7 +96,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 20px 12px 0px 12px;
+        padding: 0px 12px 0px 12px;
         .extra-movil-class {
             display: flex;
             text-align: center;
@@ -115,6 +115,9 @@
                     height: 100px;
                 }
             }
+            .info {
+                padding: 20px;
+            }
  
         }
 
@@ -122,7 +125,7 @@
             width: 100%;
             height: 48px;
             margin: 20px;
-            padding: 0 20px;
+            padding: 0px;
 
         }
 
